@@ -5,11 +5,11 @@ import Connect from "./Connect"
 
 const Main = () => {
   return (
-    <div className="main">
+    <>
       <Hero />
       <Featured />
       <Connect />
-    </div>
+    </>
   )
 }
 

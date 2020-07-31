@@ -78,7 +78,7 @@
 }
 
 .featured-project-wrapper {
-  height: 35rem;
+  min-height: 35rem;
   grid-row: 1/1;
   align-self: center;
   z-index: 1;
@@ -150,5 +150,33 @@
 .featured-project-giturl {
   &:hover {
     color: $light;
+  }
+}
+
+@media (max-width: 75em) {
+
+  .featured-project-img {
+    grid-row: 1/2;
+  }
+
+  .featured-project-wrapper {
+    grid-row: 2/2;
+  }
+
+  .featured-project {
+    
+    &:nth-child(odd) .featured-project-img {
+      grid-column: 1 / 13;
+    }
+    &:nth-child(odd) .featured-project-wrapper {
+      grid-column: 1 / 13;
+    }
+    
+    &:nth-child(even) .featured-project-img {
+      grid-column: 1 / 13;
+    }
+    &:nth-child(even) .featured-project-wrapper {
+      grid-column: 1 / 13;
+    }
   }
 }

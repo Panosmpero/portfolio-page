@@ -4,6 +4,8 @@
   width: 100%;
   display: flex;
   place-content: center;
+  top: 0;
+  left: 0;
   z-index: 10;  
   background: rgba(255, 255, 255, 0);  
 }
@@ -59,5 +61,11 @@
         opacity: 1;
       }
     }
+  }
+}
+
+@media (max-width: 75em) {
+  .nav-items {
+    display: none;
   }
 }
