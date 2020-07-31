@@ -1,3 +1,10 @@
+$white: rgb(255, 255, 255);
+$light: #88ebf2;
+$lighter: lighten($light, 15);
+$darker: darken($light, 40);
+$main: #0a6c75;
+$dark: rgba(9, 7, 19, 0.788);
+
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +24,6 @@ html {
 body {
   font: 1.6rem Helvetica;
   height: 100vh;
-  background-color: grey;
 }
 
 a {
@@ -29,6 +35,23 @@ li {
   list-style-type: none;
 }
 
+h1, h2, h3, h4 {
+  text-transform: capitalize;
+}
+
+button {
+  font-size: 2rem;
+  padding: 1.5rem .5rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: $lighter;
+  color: $dark;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: .3s ease;
+}
+
 #root {
   height: 100%;
   display: grid;
@@ -36,7 +59,7 @@ li {
   "header"
   "main"
   "footer";
-  grid-template-rows: 1fr 10fr 5%;
+  grid-template-rows: 1fr 100fr 5%;  
 }
 
 .header {
@@ -49,4 +72,33 @@ li {
 
 .footer {
   grid-area: footer;
+}
+
+.underline {
+  position: relative;
+  width: 5rem;
+  height: .3rem;
+  background-color: $dark;
+  margin: 0 auto 2rem auto;
+}
+
+/* 1200px / 16px = 75em */
+@media (max-width: 75em) {
+  html {
+    font-size: 60%;
+  }
+}
+
+/* 980px / 16px = 61.25em */
+@media (max-width: 61.25em) {
+  html {
+    font-size: 58%;
+  }
+}
+
+/* 500px / 16px = 31.25em */
+@media (max-width: 31.25em) {
+  html {
+    font-size: 50%;
+  }
 }

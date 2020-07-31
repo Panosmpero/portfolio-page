@@ -1,0 +1,9 @@
+@import "./global";
+
+.footer {
+  background-color: $main;
+  color: $light;
+  display: grid;
+  place-items: center;
+  text-transform: uppercase;
+}

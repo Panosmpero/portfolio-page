@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import Hero from "./Hero";
+import Featured from "./Featured";
+import Connect from "./Connect"
 
 const Main = () => {
   return (
     <div className="main">
-      <div>Hello Main</div>
+      <Hero />
+      <Featured />
+      <Connect />
     </div>
   )
 }

@@ -1,0 +1,63 @@
+@import "./global";
+
+.header {
+  width: 100%;
+  display: flex;
+  place-content: center;
+  z-index: 10;  
+  background: rgba(255, 255, 255, 0);  
+}
+
+.header-container {
+  bottom: 100%;
+  width: 100%;
+  max-width: 1180px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-items {
+  padding: 1rem 0;
+}
+
+.navigation {
+  display: flex;
+
+  li {
+    margin: 0 2rem;
+    cursor: pointer;
+    position: relative;
+    color: $darker;
+    font-weight: 600;
+    letter-spacing: .15rem;
+    font-size: 2rem;
+
+    &:nth-last-child(1) {
+      margin-right: 0;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -20%;
+      height: .25rem;
+      width: 0;
+      opacity: 0;
+      background-color: $light;
+      transition: .3s ease;
+    }
+
+    &:hover {
+      color: $light;
+      
+      &::after {
+        left: 0;
+        right: 0;
+        width: 100%;
+        opacity: 1;
+      }
+    }
+  }
+}
