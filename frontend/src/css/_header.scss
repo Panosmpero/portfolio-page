@@ -4,10 +4,11 @@
   width: 100%;
   display: flex;
   place-content: center;
+  position: relative;
+  background-color: $lighter;
   top: 0;
   left: 0;
   z-index: 10;  
-  background: rgba(255, 255, 255, 0);  
 }
 
 .header-container {
@@ -21,6 +22,11 @@
 
 .nav-items {
   padding: 1rem 0;
+}
+
+.nav-date {
+  color: $darker;
+  font-weight: 600;
 }
 
 .navigation {

@@ -9,15 +9,13 @@ const Header = () => {
         document.documentElement.scrollTop > 50
       )
         Object.assign(document.getElementById("header").style, {
-          background: "#cdf7fa",
           boxShadow: "0 1px 5px 1px #0a6c75",
           position: "fixed",
         });
       else
         Object.assign(document.getElementById("header").style, {
-          background: "rgba(255, 255, 255, 0)",
           boxShadow: "none",
-          position: "absolute",
+          position: "relative",
         });
     };
   });
@@ -25,7 +23,7 @@ const Header = () => {
   return (
     <header className="header" id="header">
       <div className="header-container" id="header-container">
-        <div className="nav-logo nav-items">Updated: 31/07/2020</div>
+        <div className="nav-date nav-items">Updated: 31/07/2020</div>
         <div className="nav-items">
           <ul className="navigation">
             <li>

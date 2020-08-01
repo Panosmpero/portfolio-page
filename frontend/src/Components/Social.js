@@ -30,11 +30,6 @@ const Social = () => {
        rel="noopener noreferrer"
        ><i className="fab fa-linkedin"></i
       ></a>
-    <a 
-       href="mailto:berpanos@hotmail.com"
-       id="profile-link"
-       ><i className="fas fa-at"></i
-      ></a> 
     </div>
   );
 };
