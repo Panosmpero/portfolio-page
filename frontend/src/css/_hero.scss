@@ -45,10 +45,10 @@
 
 .hero-header {
   position: absolute;
-  top: 35%;
+  top: 25%;
   left: -100%;
   font-size: 3rem;
-  transform: perspective(400px) rotateY(25deg);
+  transform: perspective(200px) rotateY(35deg);
   transition: .5s ease;
   transition-delay: .5s;
   z-index: 2;
@@ -60,7 +60,7 @@
   left: 200%;
   font-size: 3rem;
   text-transform: capitalize;
-  transform: perspective(400px) rotateY(-25deg);
+  transform: perspective(200px) rotateY(-35deg);
   transition: .5s ease;
   transition-delay: 1s;
   z-index: 2;
@@ -83,12 +83,13 @@
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+    object-position: 50% 30%;
     transition: .5s ease;
     transition-delay: 2s;
   }
 }
 
-@media (max-width: 75em) {
+@media (max-width: 61.25em) {
   .hero-my-img-container {
     display: none;
   }

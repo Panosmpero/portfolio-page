@@ -11,8 +11,8 @@ export const featuredData = [
   {
     id: 2,
     title: "E-commerce",
-    info: "A responsive frontend e-commerce app using React hooks and useContext to populate its fields. The multi-layered search filter is custom made and it can automatically extract the necessary search parameters from the provided data. The cart items are being saved on Local storage so on page refresh/revisit its contents will not be lost. The CSS is created with Sass compiler.",
-    technologies: ["react", "javascript" , "sass"],
+    info: "A responsive frontend e-commerce app using React hooks and useContext to populate its fields. The multi-layered search filter is custom made and it can automatically extract the necessary search parameters from the provided data. The cart items are being saved on local storage so that on page refresh/revisit, its contents will not be lost. The CSS is created with Sass compiler.",
+    technologies: ["react", "javascript" , "sass", "styled-components"],
     url: "https://react-first-test-hooks.netlify.app",
     giturl: "https://github.com/Panosmpero/react-test-store",
     img: "/img/e-commerce.png"
@@ -20,7 +20,7 @@ export const featuredData = [
   {
     id: 3,
     title: "Choropleth Map",
-    info: "A choropleth map utilizing D3.js library. It converts 2 seperate JSON API calls, one containing the map creation data and the other containing statistics, combining them together to result in readable and easy-to-track data.",
+    info: "A choropleth map utilizing D3.js library. It converts 2 seperate JSON API calls, one containing the map creation data and the other containing statistics, combining them together to result in readable and easy-to-understand data.",
     technologies: ["HTML", "CSS", "D3.js"],
     url: "https://codepen.io/panosmpero/full/VwvxRjj",
     giturl: "",

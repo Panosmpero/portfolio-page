@@ -1,11 +1,42 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { data } from "../data/all";
+import Loading from "./Loading";
 
 const Projects = () => {
-  return (
+  const [loading, setLoading] = useState(true);
+  const [projects, setProjects] = useState(data);
+
+  useEffect(() => {
+    // preload img
+    data.forEach(proj => {
+      const img = new Image();
+      img.src = proj.img
+    })
+    // loading
+    setTimeout(() => {
+      setLoading(false);
+    }, 500)
+  }, [projects])
+
+  const filterProjects = (filters) => {
+    const newProjects = filters === "frontend" 
+      ? data.filter(project => project.frontend)
+      : filters === "backend"
+      ? data.filter(project => project.backend)
+      : data
+    setProjects(newProjects)
+  }
+
+  return loading ? (<Loading />) : (
     <div className="projects">
+      <div className="projects-filters">
+        <button onClick={() => filterProjects()}>all</button>
+        <button onClick={() => filterProjects("frontend")}>frontend</button>
+        <button onClick={() => filterProjects("backend")}>backend</button>
+      </div>
       <div className="grid-container">
-        {data.map((project) => (
+
+        {projects.map((project) => (
           <div className="card-container" key={`proj-${project.id}`}>
             <div className="card">
               <div className="side front">
@@ -46,6 +77,7 @@ const Projects = () => {
             </div>
           </div>
         ))}
+        
       </div>
     </div>
   );

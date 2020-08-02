@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.scss";
 import Header from "./Components/Header";
+// import Sidebar from "./Components/Sidebar";
 import Main from "./Components/Main";
 import About from "./Components/About";
 import Projects from "./Components/Projects";

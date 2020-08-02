@@ -12,7 +12,7 @@ export const data = [
   {
     id: 2,
     title: "E-commerce",
-    technologies: ["react", "javascript" , "sass"],
+    technologies: ["react", "javascript" , "sass", "styled-components"],
     url: "https://react-first-test-hooks.netlify.app",
     giturl: "https://github.com/Panosmpero/react-test-store",
     img: "/img/e-commerce.png",
@@ -132,10 +132,10 @@ export const data = [
   {
     id: 14,
     title: "Sorting Algorithms",
-    technologies: ["HTML", "CSS", "javascript", "D3.js"],
-    url: "",
-    giturl: "",
-    img: "/img/.png",
+    technologies: ["react", "CSS", "javascript", "D3.js"],
+    url: "https://bero-sorting-algorithm.netlify.app/",
+    giturl: "https://github.com/Panosmpero/sorting-algorithm",
+    img: "/img/sorting_algo.png",
     backend: false,
     frontend: true
   },
@@ -152,7 +152,7 @@ export const data = [
   {
     id: 16,
     title: "Pomodoro Clock",
-    technologies: ["react", "javascript" , "css"],
+    technologies: ["react", "javascript" , "css", "styled-components"],
     url: "https://codepen.io/panosmpero/full/GRpmXLz",
     giturl: "",
     img: "/img/pomodoro.png",

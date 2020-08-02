@@ -18,6 +18,7 @@ const Featured = () => {
                 </div>
                 <div className="featured-project-wrapper">
                   <h3 className="featured-project-title">{project.title}</h3>
+                  <div className="underline"></div>
                   <p className="featured-project-info">{project.info}</p>
                   <div className="featured-project-footer">
                     <div className="featured-project-tech">

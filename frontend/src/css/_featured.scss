@@ -20,12 +20,8 @@
   
   h2 {
     font-size: 4rem;
-    color: $darker;
+    color: $dark;
   }
-}
-
-.featured-projects-container {
-  // border: 1px black solid;
 }
 
 .featured-project {
@@ -62,7 +58,9 @@
   img {
     width: 100%;
     height: 100%;
-  }
+    object-fit: cover;
+    object-position: top;  
+}
 
   &::after {
     content: "";
@@ -89,11 +87,15 @@
   display: flex;
   flex-direction: column;
   box-shadow: 5px 5px 15px $dark;
+
+  .underline {
+    margin: 0 auto 2rem 2rem;
+  }
 }
 
 .featured-project-title {
   letter-spacing: .5rem;
-  color: $darker;
+  color: $dark;
   font-size: 3rem;
   margin-bottom: 1rem;
 }

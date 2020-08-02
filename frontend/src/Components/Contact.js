@@ -10,19 +10,19 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      setStatus("Loading");
+      setStatus("loading");
       let mail = await axios.post("http://localhost:5000/api/submit", {
         name,
         email,
         message,
       });
 
-      if (!mail) return setStatus("Failed");
-      setStatus("Success");
+      if (!mail) return setStatus("failed to send message");
+      setStatus("message sent ✔");
 
     } catch (error) {
       console.log(error);
-      setStatus(`Error`)
+      setStatus(`error sending message`)
     }
   };
 
@@ -55,7 +55,7 @@ const Contact = () => {
           value={message}
           onChange={(e) => setMessage(e.target.value)}
         />
-        <div>{status}</div>
+        <div className="submit-status">{status}</div>
         <button type="submit">submit</button>
       </form>
     </div>

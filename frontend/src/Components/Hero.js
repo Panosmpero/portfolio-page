@@ -28,7 +28,7 @@ const Hero = () => {
         <h1 className="hero-title">i am panos</h1>
       </div>
       <div className="hero-text" id="hero-text">
-        <p>frontend web developer</p>
+        <p>web developer</p>
       </div>
       <div className="hero-my-img-container" id="hero-img-container">
         <img src="/img/profile_img.jpg" alt="profile" id="hero-img"/>
