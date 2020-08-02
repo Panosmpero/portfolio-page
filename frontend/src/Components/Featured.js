@@ -1,7 +1,8 @@
 import React from "react";
 import { featuredData } from "../data/featured";
 
-const Featured = () => {
+const Featured = () => { 
+
   return (
     <section className="featured-container">
       <div className="featured-wrapper">
@@ -23,9 +24,7 @@ const Featured = () => {
                   <div className="featured-project-footer">
                     <div className="featured-project-tech">
                       {project.technologies.map((tech, i) => {
-                        return (
-                          <div key={`tech-${i}`}>{tech}</div>
-                        )
+                        return <div key={`tech-${i}`}>{tech}</div>;
                       })}
                     </div>
 
@@ -42,14 +41,13 @@ const Featured = () => {
                       <div className="featured-project-giturl">
                         {project.giturl && (
                           <a
-                          href={project.giturl}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <i className="fab fa-github"></i>{" "}
-                        </a>
+                            href={project.giturl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <i className="fab fa-github"></i>{" "}
+                          </a>
                         )}
-                        
                       </div>
                     </div>
                   </div>

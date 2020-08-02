@@ -297,6 +297,25 @@ button {
   z-index: 10;
 }
 
+.header-container {
+  bottom: 100%;
+  width: 100%;
+  max-width: 1180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header-container i {
+  font-size: 2.5rem;
+}
+
 .theme-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -309,6 +328,7 @@ button {
           justify-content: center;
   color: var(--main);
   font-size: 2.2rem;
+  margin-left: 1rem;
 }
 
 #theme {
@@ -328,21 +348,6 @@ button {
   width: 2rem;
   height: 2rem;
   background-color: var(--white);
-}
-
-.header-container {
-  bottom: 100%;
-  width: 100%;
-  max-width: 1180px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .nav-items {
@@ -398,9 +403,22 @@ button {
   opacity: 1;
 }
 
+#burger {
+  display: none;
+}
+
 @media (max-width: 61.25em) {
   .nav-list {
     display: none;
+  }
+  #burger {
+    display: initial;
+    margin-right: 1rem;
+    color: var(--main);
+    cursor: pointer;
+  }
+  #burger:hover {
+    color: var(--light);
   }
 }
 
@@ -1221,10 +1239,10 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+  color: var(--main);
 }
 
 .connect-text-container h1 {
-  color: var(--main);
   font-size: 2.5rem;
 }
 
@@ -2150,7 +2168,7 @@ button {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  z-index: 1000;
+  z-index: 500;
 }
 
 .loading {

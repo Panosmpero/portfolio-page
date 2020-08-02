@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import Navigation from "./Navigation";
+import Sidebar from "./Sidebar";
 
 const Header = () => {
   const [darkTheme, setDarkTheme] = useState(false);
+  const [show, setShow] = useState(false);
 
   useEffect(() => {
     window.onscroll = () => {
@@ -38,11 +40,15 @@ const Header = () => {
   }, [darkTheme])
 
   const changeColor = () => {
-
     setDarkTheme(prev => !prev)    
+  };
+
+  const showSidebar = () => {
+    setShow(!show)
   }
 
   return (
+    <>
     <header className="header" id="header">
       <div className="header-container" id="header-container">
         <div className="theme-wrapper nav-items">
@@ -51,23 +57,13 @@ const Header = () => {
           <i className="far fa-moon"></i>
         </div>
         <div className="nav-list nav-items">
-          <ul className="navigation">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/projects">Projects</Link>
-            </li>
-            <li>
-              <Link to="/contact">Contact</Link>
-            </li>
-          </ul>
+          <Navigation />
         </div>
+        <i className="fas fa-bars" id="burger" onClick={showSidebar}></i>
       </div>
     </header>
+    <Sidebar show={show} onClick={showSidebar}/>
+    </>
   );
 };
 

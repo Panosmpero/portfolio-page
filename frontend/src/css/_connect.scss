@@ -41,9 +41,9 @@
   display: flex;
   flex-direction: column;
   position: relative;  
+  color: $main;
 
   h1 {
-    color: $main;
     font-size: 2.5rem;
   }
 
